@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="./cssgame.css" type="text/css"/>
+    <meta charset="utf-8">
+    <title>24-Game</title>
+  </head>
+  <body style="background-color:  black">
+      <div class = "wrapper" id = "wrap">
+        <script src="jquery-3.3.1.min.js" charset="utf-8"></script>
+        <h1 id= "namegame"  >24 Game</h1>
+        <button  class  = "button button-start"  onclick="start()">START GAME</button>
+        <button class =  "button button-about " onclick="howToPlay()">How to play</button>
+        <button class = "button button-10q " onclick="button10q()">10 Question</button>
+        <button class="button button-20q" onclick="button20q()">20 Question</button>
+        <button class="button choice choice1 check" >choice 1</button>
+        <button class="button choice choice2 check" >choice 2</button>
+        <button class="button choice choice3 check" >choice 3</button>
+        <button class="button choice choice4 check" >choice 4</button>
+        <div class="question">
+            <img src="" alt="" id = "img">
+        </div>
+        <div class="coutdown"></div>
+        <div class="timer">10</div> 
+        <div class="summary" id = "sumry"> 
+                <h1 class = "score"></h1><br>
+                <h1 class="totalTime"></h1>
+       </div>
+       <div class="toPlay" id="htplay"> โจทย์จะให้ตัวเลขมา 4 จะต้องนำเลขทั้ง 4 ตัวมาบวก(+), ลบ(-), คูณ (x) หรือ หาร (÷) วิธีการใดก็ได้ ทำให้ผลลัพธ์ออกมาได้เท่ากับ 24 ภายในเวลาที่กำหนด</div>
+       
+       <button class="button button-back" onclick="back()">Back</button>
+
+    
+       
+        <script> 
+               hidequestion();
+               
+         
+               var  question;
+               var  maxQ;
+               var  noQuestion ;
+               var score ;
+               var looptime;
+               var totalTime ;
+               $(document).ready(function(){
+                   $.ajax({
+                       url: 'question.json',
+                       method: 'GET',
+                       dataType: 'json',
+                       success: function(response){
+   
+                           question = response;
+                           
+                           
+                       }
+                   });
+   
+               });
+               function start(){
+                   
+                   $(".button-10q").show();
+                   $(".button-20q").show();
+                   $(".button-start").hide();
+                   $(".button-about").hide();
+                   $("#namegame").text("จำนวนข้อ");
+       
+
+               }
+               function hidequestion(){
+                   $(".button-10q").hide();
+                   $(".button-20q").hide();
+                   $(".choice").hide();
+                   $(".question").hide();
+                   $(".timer").hide();
+                   $(".summary").hide();
+                   $(".button-back").hide();
+                   $(".toPlay").hide();
+
+               }
+               function button10q(){
+                   maxQ = 10;
+                   set();
+
+                   
+                   $("#namegame").hide();
+                  
+                   $(".button-10q").hide();
+                   $(".button-20q").hide();
+                   $(".choice").show();
+                   $(".question").show();
+                   nextQuestion();
+                   $(".timer").show();
+
+                   
+               }
+               function  button20q(){
+                   maxQ = 20;
+                   set();
+                   $("#namegame").hide();
+                   $(".button-10q").hide();
+                   $(".button-20q").hide();
+                   $(".choice").show();
+                   $(".question").show();
+                   nextQuestion();
+                   $(".timer").show();
+
+               }
+               function randomQuestion(numQ){
+                let rand = Math.floor(Math.random() * Math.floor(numQ));
+                   while(noQuestion.includes(rand)){
+                       rand = Math.floor((Math.random())*Math.floor(numQ));
+                     
+                   }
+                   
+                   return rand;
+               }
+               function nextQuestion(){              
+                countDown();
+               
+                if(noQuestion.length<maxQ){
+                    index  =  randomQuestion(question.length);
+                     noQuestion.push(index);
+                     console.log(question[index])
+                
+                    document.getElementById("img").src = question[index]['question'];
+            
+                    $(".choice1").text(question[index]['choice1']);
+                    $(".choice2").text(question[index]['choice2']);
+                    $(".choice3").text(question[index]['choice3']);
+                    $(".choice4").text(question[index]['choice4']);
+                    
+                }
+                else{
+                    document.getElementById("wrap").style.backgroundColor = 'black';
+                    document.getElementById("wrap").style.borderColor = 'black';
+                    document.getElementById("sumry").style.backgroundColor = 'white';
+                    hidequestion();
+                    console.log("total Time :"+totalTime)
+                    console.log("score : "+score)
+                    clear();
+                    $(".summary").show();
+                    $(".score").text("Score : "+score+"/"+maxQ);
+                    $(".totalTime").text("Total time : "+totalTime+" s");
+                    $(".button-back").show();
+                    $(".wrapper").addClass(hideBackground);
+
+                    
+                   
+
+                    
+                    
+
+                }
+                
+
+               }
+               function checkCorect(choice){
+                    clear();
+                   
+                  
+                   if(choice==question[index]['ans']){
+                       score++;
+                       
+                   }
+                   console.log(choice);
+                
+                   nextQuestion();
+                   
+        
+
+               }
+               function countDown(){
+                
+                 $('.timer').text(15);
+                 let n  = $('.timer').text()-1;
+                       loopTime  = setInterval(function(){
+                        totalTime++;
+                           if(n>=0){
+                               $('.timer').text(n--);
+                               
+                               
+                           }
+                           else{
+                               $('.timer').text(10);
+                              clearInterval(loopTime);
+                               nextQuestion();
+                              
+                           }
+   
+                       },1000);
+                     
+
+                       
+               }
+               function clear(){
+                   clearInterval(loopTime);
+               }
+               $('.check').click(function(){
+                    checkCorect($(this).html());
+                
+
+               });
+               function back(){
+                    document.getElementById("wrap").style.backgroundColor = 'white';
+                    document.getElementById("wrap").style.borderColor = 'orange';
+                    $('.summary').hide();
+                    $('#namegame').show();
+                    $('.button-back').hide();
+                    $('.button-start').show();
+                    $('.button-about').show();
+                    $(".toPlay").hide();
+                    $("#wrapper").removeClass(hideBackground);
+
+
+                   
+                    
+
+               }
+               function set(){
+                   score = 0;
+                   totalTime = 0;
+                   noQuestion = [];
+                   $("#namegame").text("24 Game");
+                  
+               }
+               function howToPlay(){
+                    $('#namegame').hide();
+                    $('.button-start').hide();
+                    $('.button-about').hide();
+                    $('.button-back').show();
+                    $('.toPlay').show();
+                    document.getElementById("wrap").style.backgroundColor = 'black';
+                    document.getElementById("wrap").style.borderColor = 'black';
+                    document.getElementById("htplay").style.backgroundColor = 'white';
+
+               }
+              
+
+               
+               
+                
+            
+              
+
+
+
+
+
+
+
+
+
+        </script>
+        
+        
+
+
+      </div>
+          
+         
+        
+
+
+
+
+
+
+
+
+   
+  </body>
+</html>
+ 

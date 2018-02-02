@@ -1,0 +1,165 @@
+[
+    {
+        "question" : "picture/1.jpg",
+        "choice1" : " ( ( 6 x 3 ) + 7 ) - 1",
+        "choice2": " ( ( 6 x 7 ) + 3 ) - 1",
+        "choice3":" ( ( 7 x 3 ) -6 ) + 1",
+        "choice4":" ( ( 6 x 1 ) x 3 ) + 7",
+        "ans":" ( ( 6 x 3 ) + 7 ) - 1"
+    },
+    {
+        "question" : "picture/2.jpg",
+        "choice1" : "( (4 x 2 ) - 9 ) / 3",
+        "choice2": "( (3 x 4 ) + 2 ) / 9",
+        "choice3":"( (9 x 4 ) x 2 ) / 3",
+        "choice4":"( (9 + 4 ) x 3 ) / 2",
+        "ans":"( (9 x 4 ) x 2 ) / 3"
+    },
+    {
+        "question" : "picture/3.jpg",
+        "choice1" : "( 3 - ( 9 / 3 ) ) x 3",
+        "choice2": "( 9 + ( 3 - 3) ) x 3",
+        "choice3":"( 3 + ( 3 / 3 ) ) x 9",
+        "choice4":"( 9 - ( 3 / 3) ) x 3",
+        "ans":"( 9 - ( 3 / 3) ) x 3"
+    },
+    {
+        "question" : "picture/4.jpg",
+        "choice1" : "( 7 / ( 6 - 5 )) x 8",
+        "choice2": "( 6 / ( 7 - 5 )) x 8",
+        "choice3":"( 8 / ( 7 - 5 )) + 6",
+        "choice4":"( 5 / ( 7 - 6 )) x 8",
+        "ans":"( 6 / ( 7 - 5 )) x 8"
+    },
+    {
+        "question" : "picture/5.jpg",
+        "choice1" : "( ( 2 + 7 ) x  9 ) - 8",
+        "choice2": "( ( 9 + 7 ) x  2 ) - 8",
+        "choice3":"( ( 8 + 7 ) x  2 ) - 9",
+        "choice4":"( ( 7 + 8 ) x  2 ) / 9 ",
+        "ans":"( ( 9 + 7 ) x  2 ) - 8"
+    },
+    {
+        "question" : "picture/6.jpg",
+        "choice1" : "( 5 - ( 6 - 6 ) ) x 6",
+        "choice2": "( 6 - ( 6 / 6 ) ) x 5",
+        "choice3":"( 6 - ( 6 + 6 ) ) x 6",
+        "choice4":"( 5 - ( 6 / 6 ) ) x 6",
+        "ans":"( 5 - ( 6 / 6 ) ) x 6"
+    },
+    {
+        "question" : "picture/7.jpg",
+        "choice1" : "( 5 x 5 ) - ( 9 / 9 )",
+        "choice2": "( 9 x 5 ) / ( 9 - 5 )",
+        "choice3":"( 5 + 9 ) + ( 9 - 5 )",
+        "choice4":"( 5 + 5 ) + ( 9 + 9 )",
+        "ans":"( 5 x 5 ) - ( 9 / 9 )"
+    },
+    {
+        "question" : "picture/8.jpg",
+        "choice1" :"( ( 2 x 3 ) + 6 ) + 8",
+        "choice2":" ( ( 6 x 3 ) - 8 ) + 2",
+        "choice3":" ( ( 8 x 3 ) - 6 ) - 2",
+        "choice4":" ( ( 6 x 3 ) + 8 ) - 2",
+        "ans":" ( ( 6 x 3 ) + 8 ) - 2"
+    },
+    {
+        "question" : "picture/9.jpg",
+        "choice1" : "( 8 - 5 ) * ( 8 + 8 )",
+        "choice2":"( 5 + 8 ) - ( 8 - 8 )",
+        "choice3":"( 5 x 8 ) - ( 8 + 8 )",
+        "choice4":"( 5 + 8 ) + ( 8 + 8 )",
+        "ans":"( 5 x 8 ) - ( 8 + 8 )"
+    },
+    {
+        "question" : "picture/10.jpg",
+        "choice1" : " ( 7 x 4 ) x ( 8 / 2 )",
+        "choice2": " ( 7 - 4 ) x ( 8 / 2 )",
+        "choice3":" ( 7 + 4 ) - ( 8 / 2 )",
+        "choice4":" ( 7 x 4 ) - ( 8 / 2 )",
+        "ans":" ( 7 x 4 ) - ( 8 / 2 )"
+    },
+    {
+        "question" : "picture/11.jpg",
+        "choice1" : "( 9 + 6 ) - ( 4 x 2 )",
+        "choice2": "( 9 - 6 ) x ( 4 x 2 )",
+        "choice3":"( 9 + 6 ) + ( 4 x 2 )",
+        "choice4":"( 9 + 6 ) - ( 4 x 2 )",
+        "ans":"( 9 - 6 ) x ( 4 x 2 )"
+    },
+    {
+        "question" : "picture/12.jpg",
+        "choice1" : "( 8 - 5 ) + ( 9 + 7 )",
+        "choice2": "( 8 + 5 ) + ( 9 + 7 )",
+        "choice3":"( 8 x 5 ) - ( 9 + 7 )",
+        "choice4":"( 8 x 5 ) / ( 9 - 7 )",
+        "ans":"( 8 x 5 ) - ( 9 + 7 )"
+    },
+    {
+        "question" : "picture/13.jpg",
+        "choice1" : "( ( 9 - 4 ) x 3 ) + 9",
+        "choice2": "( ( 9 + 4 ) / 3 ) + 9",
+        "choice3":"( ( 9 - 4 ) + 3 ) + 9",
+        "choice4":"( ( 9 / 3 ) x 4 ) + 9",
+        "ans":"( ( 9 - 4 ) x 3 ) + 9"
+    },
+    {
+        "question" : "picture/14.jpg",
+        "choice1": "( 9 + 6 ) x ( 3 + 2 )",
+        "choice2": "( 2 x 3 ) + ( 6 + 9 )",
+        "choice3":"( 9 / 3 ) x ( 6 + 2 )",
+        "choice4":"( 9 + 3 ) + ( 6 + 2 )",
+        "ans":"( 9 / 3 ) x ( 6 + 2 )"
+    },
+    {
+        "question" : "picture/15.jpg",
+        "choice1" : "( ( 9 + 6 ) / 4 ) x 7",
+        "choice2": "( ( 4 + 7 ) + 9 ) + 6",
+        "choice3":"( ( 9 - 7 ) + 4 ) x 6",
+        "choice4":"( ( 9 + 7 ) / 4 ) x 6",
+        "ans":"( ( 9 + 7 ) / 4 ) x 6"
+    }
+    ,
+    {
+        "question" : "picture/16.jpg",
+        "choice1" : "( ( 9 ÷ 3 ) x 7 ) + 3",
+        "choice2": "( ( 9 + 3 ) + 7 ) + 3",
+        "choice3":"( ( 7 + 3 ) + 9 ) + 3",
+        "choice4":"( ( 7 - 3 ) + 9 ) + 3",
+        "ans":"( ( 9 ÷ 3 ) x 7 ) + 3"
+    },
+    {
+        "question" : "picture/17.jpg",
+        "choice1" : "( ( 6 - 3 ) + 7 ) x 3",
+        "choice2": "( ( 6 - 3 ) + 7 ) x 6",
+        "choice3":"( ( 7 - 6 ) + 3 ) x 6",
+        "choice4":"( ( 7 x 6 ) / 6 ) x 3",
+        "ans":"( ( 7 - 6 ) + 3 ) x 6"
+    },
+    {
+        "question" : "picture/18.jpg",
+        "choice1" : "( 5 - ( 1 x 5 ) ) x 5",
+        "choice2": "( 5 + ( 1 ÷ 5 ) ) x 5",
+        "choice3":"( 5 x ( 1 ÷ 5 ) ) x 5",
+        "choice4":"( 5 - ( 1 ÷ 5 ) ) x 5",
+        "ans":"( 5 - ( 1 ÷ 5 ) ) x 5"
+    },
+    {
+        "question" : "picture/19.jpg",
+        "choice1" : "( ( 2 x 7 ) + 7 ) + 1",
+        "choice2": "( ( 7 x 7 ) - 1 ) ÷ 2",
+        "choice3":"( ( 7 + 7 ) x 2 ) + 1",
+        "choice4":"( ( 7 + 7 ) - 1 ) ÷ 2",
+        "ans":"( ( 7 x 7 ) - 1 ) ÷ 2"
+    },
+    {
+        "question" : "picture/20.jpg",
+        "choice1" : "( ( 8 x 7 ) - 8 ) ÷ 2",
+        "choice2": "( ( 8 x 7 ) + 8 ) ÷ 2",
+        "choice3":"( ( 8 + 7 ) + 8 ) + 2",
+        "choice4":"( ( 8 x 7 ) - 8 ) - 2",
+        "ans":"( ( 8 x 7 ) - 8 ) ÷ 2"
+    }
+  
+   
+]
